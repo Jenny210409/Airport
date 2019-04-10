@@ -24,7 +24,7 @@ airport <- extract_tables(f2, pages = 1)
 f3 <- "https://www.queenstownairport.co.nz/assets/documents/ZQN-monthly-passengers-2011-to-2015.pdf"
 airport1 <- extract_tables(f3, pages = 1)
 ```
-####Data Cleaning
+#### Data Cleaning
 ```
 # change to data frame from list (only arrivals)
 
@@ -97,8 +97,8 @@ airport_final1<-airport_final
 
 airport_final1$month <- as.factor(airport_final1$month)
 ```
-##Prediction
-####Split into train and test and make a model 
+## Prediction
+#### Split into train and test and make a model 
 ```
 train<-airport_final1[1:round(0.7*nrow(airport_final1)),]
 test<-airport_final1[(round(0.7*nrow(airport_final1))+1):nrow(airport_final1),]
@@ -131,7 +131,7 @@ test$prediction<-(predict(model,test))
 error<-test$Passenger-test$prediction
 sqrt(mean(error^2))
 ```
-####Plot and make graph
+#### Plot and make graph
 ```
 #plot the trend
 
@@ -172,7 +172,7 @@ ggplot(data=airport_final,
        aes(y=Passenger, x=Time, colour=var)) +
   geom_line()
 ```
-##Conclusion
+## Conclusion
 The prediction shows that the passengers in the future would have a slight increase trend into the future.
        
 
