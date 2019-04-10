@@ -172,6 +172,10 @@ ggplot(data=airport_final,
        aes(y=Passenger, x=Time, colour=var)) +
   geom_line()
 ```
+
+![Alt text](https://github.com/Jenny210409/Airport/blob/master/Airport%20Rplot.png)
+
+
 ## Conclusion
 The prediction shows that the passengers in the future would have a slight increase trend into the future.
        
