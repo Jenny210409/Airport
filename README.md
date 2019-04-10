@@ -177,6 +177,6 @@ ggplot(data=airport_final,
 
 
 ## Conclusion
-The prediction shows that the passengers in the future would have a slight increase trend into the future.
+The prediction shows that the passengers in the future would have a slight increase trend into the future. Using linear regression model shows better result than randomforest model.
        
 
